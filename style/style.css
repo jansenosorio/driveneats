@@ -9,8 +9,6 @@ body {
 
   width: 414px;
   height: auto;
-
-  margin-top: 10px;
 }
 
 
@@ -57,19 +55,20 @@ body {
 
 .container-central {
   position: absolute;
-  top: 105px;
+  top: 95px;
   width: 414px;
   background-color: #E5E5E5;
   overflow: hidden;
 }
 
 .container-conteudo{
-  width: 100%;
+  width: 414px;
   margin-left: 19px;
   margin-top: 31px;
 }
 
 .texto-central {
+  width: 414px;
   font-family: 'Righteous', cursive;
   font-weight: 400;
   font-size: 26px;
@@ -103,13 +102,6 @@ body {
   box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
 }
 
-.borda {
-  border: 5px solid #32b72f;
-}
-
-.borda .icon-hidden {
-  opacity: 1;
-}
 
 .prato-P-conteudo {
   position: relative;
@@ -158,12 +150,14 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.container-bebida img {
+.container-bebida img :nth-child(1) {
   width: 144px;
   height: 87px;
 }
 
 .tipos-bebidas {
+  position: relative;
+
   width: 172px;
   height: 202px;
 
@@ -204,12 +198,14 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-.container-sobremesa img {
+.container-sobremesa img :nth-child(1) {
   width: 144px;
   height: 87px;
 }
 
 .tipos-sobremesa {
+  position: relative;
+
   width: 172px;
   height: 202px;
 
@@ -237,11 +233,12 @@ body {
 /*Inicio Configurações Rodape*/
 
 .rodape {
+  position: absolute;
+  top: 1030px;
+  left: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 1010px;
   width: 414px;
   height: 92px;
 
@@ -276,11 +273,43 @@ body {
   width: 60%;
 }
 
-.icon-hidden {
+/*Seletores que estão conversando com Javascript*/
+
+.icon-hidden-prato {
   position: absolute;
   bottom: -10px;
   right: 20px;
   width: 25px;
   height: 25px;
   opacity: 0;
+}
+
+.icon-hidden-bebidas {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+}
+
+.icon-hidden-sobremesa {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  width: 25px;
+  height: 25px;
+  opacity: 0;
+}
+
+.borda-prato,
+.borda-bebidas,
+.borda-sobremesa {
+  border: 5px solid #32b72f;
+}
+
+.borda-prato .icon-hidden-prato,
+.borda-bebidas .icon-hidden-bebidas,
+.borda-sobremesa .icon-hidden-sobremesa {
+  opacity: 1;
 }
