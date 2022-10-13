@@ -57,12 +57,14 @@ body {
   position: absolute;
   top: 95px;
   width: 414px;
+  height: 1026px;
   background-color: #E5E5E5;
   overflow: hidden;
 }
 
 .container-conteudo{
   width: 414px;
+  height: 100%;
   margin-left: 19px;
   margin-top: 31px;
 }
@@ -234,8 +236,9 @@ body {
 
 .rodape {
   position: absolute;
-  top: 1030px;
-  left: 0;
+  top: 1040px;
+
+
   display: flex;
   align-items: center;
   justify-content: center;
