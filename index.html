@@ -193,7 +193,7 @@
       <!--Inicio Rodape-->
       <div class="rodape">
         <div class="button-rodape-disable">
-          <button type="button" disabled>
+          <button type="button" disabled onclick="checkout()">
             Selecione os 3 itens para fechar o pedido
           </button>
         </div>
@@ -223,9 +223,10 @@
         <div class="botao-confirmar">
           <button type="button">Tudo certo, pode pedir!</button>
         </div>
-        <div class="cancelar-pedido">Cancelar</div>
+        <div class="cancelar-pedido" onclick="cancelar()">Cancelar</div>
       </div>
     </div>
+    <!--Fim container Checkout-->
   </body>
   <script src="script/script.js"></script>
 </html>

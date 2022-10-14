@@ -55,3 +55,15 @@ function ativarBotao() {
     botao.textContent = 'Fechar Pedido'
   }
 }
+
+function checkout() {
+  const caixaCheckout = document.querySelector('.container-checkout-hidden')
+
+  caixaCheckout.classList = 'container-checkout-show'
+}
+
+function cancelar() {
+  const caixaCheckout = document.querySelector('.container-checkout-show')
+
+  caixaCheckout.classList = 'container-checkout-hidden'
+}
