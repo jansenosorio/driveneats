@@ -1,27 +1,57 @@
+var pratoPrincipal
+var bebidaPrincipal
+var sobremesa
+
 function selecionarPrato(selecao) {
-  const pratoPrincipal = document.querySelector('.borda-prato')
+  pratoPrincipal = document.querySelector('.borda-prato')
 
   if (pratoPrincipal !== null) {
     pratoPrincipal.classList.remove('borda-prato')
   }
 
   selecao.classList.toggle('borda-prato')
+
+  ativarBotao()
 }
 
 function selecionarBebida(selecao) {
-  const bebidaPrincipal = document.querySelector('.borda-bebidas')
+  bebidaPrincipal = document.querySelector('.borda-bebidas')
+
   if (bebidaPrincipal !== null) {
     bebidaPrincipal.classList.remove('borda-bebidas')
   }
 
   selecao.classList.toggle('borda-bebidas')
+
+  ativarBotao()
 }
 
 function selecionarSobremesa(selecao) {
-  const sobremesa = document.querySelector('.borda-sobremesa')
+  sobremesa = document.querySelector('.borda-sobremesa')
+
   if (sobremesa !== null) {
     sobremesa.classList.remove('borda-sobremesa')
   }
 
   selecao.classList.toggle('borda-sobremesa')
+
+  ativarBotao()
+}
+
+// Liberar botão pedido
+
+function ativarBotao() {
+  const botaoCaixa = document.querySelector('.button-rodape-disable')
+  const botao = document.querySelector('button')
+
+  if (
+    pratoPrincipal !== undefined &&
+    bebidaPrincipal !== undefined &&
+    sobremesa !== undefined
+  ) {
+    botaoCaixa.classList.remove('button-rodape-disable')
+    botaoCaixa.classList.add('button-rodape-enable')
+    botao.disabled = false
+    botao.textContent = 'Fechar Pedido'
+  }
 }
