@@ -6,6 +6,7 @@ body {
 
 /* Configurações Container da Página*/
 .container {
+  position: relative;
 
   width: 414px;
   height: auto;
@@ -347,4 +348,109 @@ body {
 .borda-bebidas .icon-hidden-bebidas,
 .borda-sobremesa .icon-hidden-sobremesa {
   opacity: 1;
+}
+
+
+.container-checkout-hidden {
+
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 100;
+
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 414px;
+  height: 1128px;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+.container-checkout-show {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 100;
+
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 414px;
+  height: 1128px;
+
+  font-family: 'Roboto', sans-serif;
+}
+
+.container-checkout-central {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  flex-direction: column;
+
+  width: 377px;
+  height: 353px;
+
+  background-color: #50D074;
+  border-radius: 9px;
+
+  box-sizing: border-box;
+
+  padding-left: 20px;
+  padding-right: 25px;
+
+}
+
+.container-checkout-central .titulo {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  margin-top: 21px;
+  margin-bottom: 28px;
+  color: #FFFFFF;
+}
+
+.container-checkout-central .informacoes-pedido {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 400;
+  font-size: 22px;
+  color: #FFFFFF;
+  margin-bottom: 13px;
+}
+
+.container-checkout-central .total-pedido {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 26px;
+  color: #FFFFFF;
+  padding-bottom: 24px;
+}
+
+.container-checkout-central .botao-confirmar {
+}
+
+.container-checkout-central .botao-confirmar button {
+  width: 333px;
+  height: 52px;
+  border: none;
+  background-color: #FFFFFF;
+  border-radius: 100px;
+
+  font-weight: 700;
+  font-size: 22px;
+  color: #50D074;
+
+  margin-bottom: 20px;
+}
+
+.container-checkout-central .cancelar-pedido {
+  font-weight: 700;
+  line-height: 24px;
+  color: #FFFFFF;
 }
