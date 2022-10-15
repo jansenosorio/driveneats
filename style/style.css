@@ -4,6 +4,10 @@ body {
   justify-content: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Configurações Container da Página*/
 .container {
   position: relative;
@@ -421,7 +425,7 @@ body {
   display: flex;
   justify-content: space-between;
   font-weight: 400;
-  font-size: 22px;
+  font-size: 20px;
   color: #FFFFFF;
   margin-bottom: 13px;
 }
@@ -438,7 +442,11 @@ body {
   padding-bottom: 24px;
 }
 
-.container-checkout-central .botao-confirmar button {
+.container-checkout-central .botao-confirmar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
   width: 333px;
   height: 52px;
   border: none;
@@ -450,6 +458,12 @@ body {
   color: #50D074;
 
   margin-bottom: 20px;
+}
+
+.container-checkout-central .botao-confirmar a {
+  font-weight: 700;
+  font-size: 22px;
+  color: #50D074;
 }
 
 .container-checkout-central .cancelar-pedido {

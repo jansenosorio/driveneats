@@ -1,6 +1,7 @@
 var pratoPrincipal
 var bebidaPrincipal
 var sobremesa
+var mensagemWhats
 
 function selecionarPrato(selecao) {
   pratoPrincipal = document.querySelector('.borda-prato')
@@ -100,10 +101,24 @@ function checkout() {
     pratoPrincipalCheckValue + bebidaPrincipalCheckValue + sobremesaCheckValue
 
   total.textContent = calculoTotal.toFixed(2)
+
+  mensagemWhats = encodeURIComponent(`Olá, gostaria de fazer o pedido:
+  - Prato: ${pratoPrincipalCheck}
+  - Bebida: ${bebidaPrincipalCheck}
+  - Sobremesa: ${sobremesaCheck}
+  Total: R$ ${calculoTotal.toFixed(2)}`)
+
+  gerarMensagem()
 }
 
 function cancelar() {
   const caixaCheckout = document.querySelector('.container-checkout-show')
 
   caixaCheckout.classList = 'container-checkout-hidden'
+}
+
+function gerarMensagem() {
+  const nossaTag = document.querySelector('.botao-confirmar a')
+
+  nossaTag.href = `https://wa.me/5511983509154?text=${mensagemWhats}`
 }
