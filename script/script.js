@@ -58,8 +58,48 @@ function ativarBotao() {
 
 function checkout() {
   const caixaCheckout = document.querySelector('.container-checkout-hidden')
+  const descricaoUm = document.querySelector('.descricao-1')
+  const descricaoDois = document.querySelector('.descricao-2')
+  const descricaoTres = document.querySelector('.descricao-3')
+  const valorUm = document.querySelector('.valor-1')
+  const valorDois = document.querySelector('.valor-2')
+  const ValorTres = document.querySelector('.valor-3')
+  const total = document.querySelector('.valor-total')
 
   caixaCheckout.classList = 'container-checkout-show'
+
+  const pratoPrincipalCheck = document.querySelector(
+    '.borda-prato .nome-item'
+  ).innerHTML
+  const bebidaPrincipalCheck = document.querySelector(
+    '.borda-bebidas .nome-item'
+  ).innerHTML
+  const sobremesaCheck = document.querySelector(
+    '.borda-sobremesa .nome-item'
+  ).innerHTML
+
+  const pratoPrincipalCheckValue = Number(
+    document.querySelector('.borda-prato .valor-item').innerHTML
+  )
+  const bebidaPrincipalCheckValue = Number(
+    document.querySelector('.borda-bebidas .valor-item').innerHTML
+  )
+  const sobremesaCheckValue = Number(
+    document.querySelector('.borda-sobremesa .valor-item').innerHTML
+  )
+
+  descricaoUm.textContent = pratoPrincipalCheck
+  descricaoDois.textContent = bebidaPrincipalCheck
+  descricaoTres.textContent = sobremesaCheck
+
+  valorUm.textContent = pratoPrincipalCheckValue.toFixed(2)
+  valorDois.textContent = bebidaPrincipalCheckValue.toFixed(2)
+  ValorTres.textContent = sobremesaCheckValue.toFixed(2)
+
+  const calculoTotal =
+    pratoPrincipalCheckValue + bebidaPrincipalCheckValue + sobremesaCheckValue
+
+  total.textContent = calculoTotal.toFixed(2)
 }
 
 function cancelar() {
